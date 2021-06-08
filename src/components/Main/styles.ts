@@ -1,33 +1,18 @@
 import styled from 'styled-components'
 
-export const Wrapper = styled.main`
-  background-color: #06092b;
-  color: #fff;
-  width: 100%;
-  height: 100%;
-  padding: 3rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+export const Wrapper = styled.div`
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+
+ margin-top: 120px;
+
+ @media(max-width: 769px) {
+   grid-template-columns: 1fr;
+   margin-top: 60px;
+   padding: 0 10px;
+ }
 `
 
-export const Logo = styled.img`
-  width: 25rem;
-  margin-bottom: 2rem;
-`
-
-export const Title = styled.h1`
-  font-size: 2.5rem;
-`
-
-export const Description = styled.h2`
-  font-size: 2rem;
-  font-weight: 400;
-`
-
-export const Illustration = styled.img`
-  margin-top: 3rem;
-  width: min(30rem, 100%);
+export const Content = styled.div`
+   margin-bottom: 30px;
 `
