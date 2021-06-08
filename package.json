@@ -13,7 +13,9 @@
     "generate": "yarn plop --plopfile generators/plopfile.js",
     "storybook": "start-storybook -s ./public -p 6006",
     "build-storybook": "build-storybook -s ./public",
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "commit": "cz",
+    "codegen": "graphql-codegen --config codegen.yml"
   },
   "lint-staged": {
     "src/**/*": [
@@ -22,6 +24,10 @@
     ]
   },
   "dependencies": {
+    "@styled-icons/boxicons-logos": "^10.34.0",
+    "codegen": "^0.1.0",
+    "graphql-codegen": "^0.4.0",
+    "graphql-request": "^3.4.0",
     "next": "10.2.3",
     "next-pwa": "^5.2.21",
     "react": "17.0.2",
