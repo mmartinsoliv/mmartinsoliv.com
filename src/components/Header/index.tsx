@@ -13,7 +13,7 @@ const Header = () => (
         </S.MenuList>
         <S.MenuList>
           <Link href="/blog">
-            <a> Blog </a>
+            <a> Blogs </a>
           </Link>
         </S.MenuList>
       </S.Menu>
