@@ -9,7 +9,7 @@ type Post = {
 }
 
 export type PostProps = {
-  posts: Post[]
+  posts?: Post[]
   heading: string
 }
 

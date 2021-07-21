@@ -5,11 +5,11 @@ import * as S from './styles'
 
 const Main = ({ posts, heading }: PostProps) => (
   <S.Wrapper>
-      <S.Content>
-        <Sidenav />
-        <SocialLinks />
-      </S.Content>
-      <Post  posts={posts} heading={heading}  />
+    <S.Content>
+      <Sidenav />
+      <SocialLinks />
+    </S.Content>
+    <Post posts={posts} heading={heading} />
   </S.Wrapper>
 )
 
