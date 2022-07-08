@@ -58,6 +58,7 @@ const globalStyles = globalCss({
     padding: '0',
     WebkitFontSmoothing: 'antialiased',
     background: '$background',
+    color: '$primary'
   },
   kbd: {
     color: '$background',
