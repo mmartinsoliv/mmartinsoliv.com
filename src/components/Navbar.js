@@ -5,6 +5,31 @@ import { useRouter } from 'next/router'
 import { motion, AnimateSharedLayout } from 'framer-motion'
 import { useKBar } from 'kbar'
 
+export default function NavBar() {
+    const { query } = useKBar()
+
+    return (
+        <AnimateSharedLayout>
+            <Header>
+               <Link href="/" passHref>
+                  <ButtonLogo as="a">M</ButtonLogo>
+               </Link>
+               <Aside>
+                   <ButtonHeader
+                     as="button"
+                     type="button"
+                     aria-label='Command'
+                     onClick={query.toggle}
+                     css={{ padding: '0 8px' }}
+                   >
+                       <Icon className='ri-command-line' />
+                   </ButtonHeader>
+               </Aside>
+            </Header>
+        </AnimateSharedLayout>
+    )
+}
+
 const Header = styled('header', {
     display: 'flex',
     alignItems: 'center',
@@ -41,26 +66,15 @@ const ButtonLogo = styled(ButtonHeader, {
     fontFamily: '$heading',
 })
 
-export default function NavBar() {
-    const router = useRouter()
-
-    const pages = [
-        'About',
-        'Articles',
-        'Projects'
+const Icon = styled('i', {
+    fontSize: '24px',
+    lineHeight: '32px',
+})
  
-    ]
-
-    const [hovered, setHovered] = useState('')
-    const { query } = useKBar()
-
-    return (
-        <AnimateSharedLayout>
-            <Header>
-               <Link href="/" passHref>
-                  <ButtonLogo as="a">M</ButtonLogo>
-               </Link>
-            </Header>
-        </AnimateSharedLayout>
-    )
-}
+const Aside = styled('div', {
+  display: 'flex',
+  alignItems: 'center',
+  paddingRight: '12px',
+  marginLeft: 'auto',
+})
+  
